@@ -4,3 +4,12 @@
 .gackground-card{
     background-color: gray;
 }
+
+.cardLength {
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.textCenter{
+    text-align: center;
+}

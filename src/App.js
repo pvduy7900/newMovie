@@ -30,14 +30,25 @@ function App() {
     console.log("genre", result);
   };
 
+
+
+
   useEffect(() => { // Similar to componentDidMount and componentDidUpdate:
     getGenreList();
     getNowPlayingMovie();
   }, []);
+
+
   let searchContents = ''
   let loadmore = () => {
 
     setPage(page + 1)
+    getNowPlayingMovie()
+  }
+
+  let pageOne = () => {
+
+    setPage(1)
     getNowPlayingMovie()
   }
 
@@ -120,7 +131,7 @@ function App() {
           <ButtonToolbar aria-label="Toolbar with button groups"  container>
             <ButtonGroup className="mr-2" aria-label="First group">
             <LoadMore loadmore={loadmore} />
-              <Button>1</Button> <Button>2</Button> <Button>3</Button> <Button>4</Button>
+              <Button onClick = {pageOne}>1</Button> <Button>2</Button> <Button>3</Button> <Button>4</Button>
               <LoadMore loadmore={loadmore} />
             </ButtonGroup>
           </ButtonToolbar>
