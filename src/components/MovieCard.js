@@ -48,7 +48,7 @@ export default function MovieCard(props) {
 
 
             <Card.Body className ="textCenter">
-                <Card.Link href="#">Trailer</Card.Link>
+                <Card.Link href="#" onClick = {() => props.getYoutube(movie.id)}>Trailer</Card.Link>
 
             </Card.Body>
 
